@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.scss">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">
+        <button class="hamburger">
+            <span class="hamburger__box">
+                <span class="hamburger__inner"></span>
+            </span>
+        </button>
+        <ul class="navbar">
+            <li class="navbar__item">kONTAKT</li>
+            <li class="navbar__item">OFERTA</li>
+            <li class="navbar__item">REALIZACJE</li>
+            <li class="navbar__item">NARZĘDZIA</li>
+        </ul>
+    </div>
+    <div class="sidebarnav">
+        <i class="far fa-times-circle fa-1x closenav"></i>
+        <a href="#">home</a>
+        <a href="#">books</a>
+        <a href="#">pics</a>
+        <a href="#">contact</a>
+    </div>
+    <main class="main">
+        <div class="hero">
+            <h1>tu Klima Rol </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, asperiores? Facilis cumque quas maxime
+                debitis illo aliquid dolorum neque necessitatibus?X Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Rem repudiandae quia velit numquam voluptatum, molestias et.</p>
+        </div>
+        <div class="main__row">
+            <img src="https://images.pexels.com/photos/807623/pexels-photo-807623.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+            <div class="main__row__content">
+                <h3>Lorem, ipsum dolor sit amet consectetur</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia nisi maxime consequatur
+                    culpa, maiores necessitatibus iste tempore omnis repudiandae.</p>
+            </div>
+            <div class="main__row__i">
+                <i class="fas fa-leaf fa-2x"></i>
+                <i class="fas fa-home fa-2x"></i>
+                <i class="fas fa-shipping-fast fa-2x"></i>
+            </div>
+        </div>
+        <div class="main__row">
+            <div class="main__row__content">
+                <h3>Lorem, ipsum dolor sit amet consectetur</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia nisi maxime consequatur
+                    culpa, maiores necessitatibus iste tempore omnis repudiandae.</p>
+                </div>
+                <img src="https://images.pexels.com/photos/3050597/pexels-photo-3050597.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <div class="main__row__i">
+                    <i class="fas fa-leaf fa-2x"></i>
+                    <i class="fas fa-home fa-2x"></i>
+                    <i class="fas fa-shipping-fast fa-2x"></i>
+                </div>
+    
+        </div>
+        <div class="main__row">
+            <img src="https://images.pexels.com/photos/567447/pexels-photo-567447.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div class="main__row__content">
+                <h3>Lorem, ipsum dolor sit amet consectetur</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia nisi maxime consequatur
+                    culpa, maiores necessitatibus iste tempore omnis repudiandae.</p>
+            </div>
+            <div class="main__row__i">
+                <i class="fas fa-leaf fa-2x"></i>
+                <i class="fas fa-home fa-2x"></i>
+                <i class="fas fa-shipping-fast fa-2x"></i>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script>
+        const closenav = document.querySelector('.closenav')
+        const sidenav = document.querySelector('.sidebarnav')
+        const el = document.querySelector('.hamburger');
+        console.log(el)
+        const addClass = () => {
+            el.classList.toggle('hamburger--active');
+            sidenav.classList.toggle('sidebarnav--active')
+            console.log(nav)
+            nav.classList.toggle('nav--actv')
+        }
+        el.addEventListener('click', addClass)
+        sidenav.addEventListener('click', addClass)
+    </script>
+</body>
+
+</html>

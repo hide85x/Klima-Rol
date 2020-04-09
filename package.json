@@ -1,0 +1,18 @@
+{
+  "main": "index.html",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.25.0"
+  },
+  "scripts": {
+    "build": "parcel build index.html --out-dir docs --public-url ./",
+    "start": "parcel index.html --out-dir docs "
+  },
+  "dependencies": {
+    "parcel": "^1.12.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hide85x/Klima-Rol"
+  }
+}
