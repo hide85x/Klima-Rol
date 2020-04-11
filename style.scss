@@ -53,6 +53,9 @@ body {
              cursor: pointer;
              transition: transform 0.2s ease-in, color 0.3s ease-in;
              font-size: 1.5rem;
+             @media (max-width:700px) {
+                 margin:0 5px;
+             }
          }
          i:hover {
              transform: scale(1.2);
