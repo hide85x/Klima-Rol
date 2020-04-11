@@ -90,6 +90,7 @@ body {
   }
 }
 .main .hero .heroImg {
+  margin: -208px;
   opacity: 0.6;
   position: absolute;
   z-index: -2;
@@ -98,6 +99,12 @@ body {
   background-position: center;
   background-size: cover;
   background-image: url("https://images.pexels.com/photos/267151/pexels-photo-267151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+@media (max-width: 1000px) {
+  .main .hero .heroImg {
+    margin: auto;
+    padding: 0;
+  }
 }
 .main .slide-in {
   opacity: 0;
@@ -184,9 +191,9 @@ body {
 @media (max-width: 1000px) {
   .sidebarnav {
     margin-top: 105px;
-    width: 250px;
-    height: 250px;
-    font-size: 0.8rem;
+    width: 400px;
+    height: 400px;
+    font-size: 1rem;
   }
 }
 .sidebarnav a, .sidebarnav i {
