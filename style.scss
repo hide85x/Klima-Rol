@@ -48,6 +48,7 @@ body {
          transform: scale(1);
          gap: 20px;
          i {
+             padding: 5px;
              transform: scale(1);
              cursor: pointer;
              transition: transform 0.2s ease-in, color 0.3s ease-in;
