@@ -323,7 +323,7 @@ transition: transform 0.3s 0.1s ease-in-out
         img {
             width: 100%;
             transition: all 0.3s ease-in;
-            opacity: 0.7;
+            opacity: 0.5;
         }
     }
     
@@ -337,7 +337,7 @@ transition: transform 0.3s 0.1s ease-in-out
         box-shadow: 0 0 100px 10px  orangered;
         z-index: 1   ;
         @media (max-width:1000px) {
-            transform: scale(1.4) 
+            transform: none
     
         }
 

@@ -301,7 +301,7 @@ body {
 .card img {
   width: 100%;
   transition: all 0.3s ease-in;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .card:hover {
@@ -316,7 +316,7 @@ body {
 }
 @media (max-width: 1000px) {
   .card:hover {
-    transform: scale(1.4);
+    transform: none;
   }
 }
 
