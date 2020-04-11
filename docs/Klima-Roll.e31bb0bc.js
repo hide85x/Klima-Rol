@@ -148,7 +148,6 @@ var sliderImages = document.querySelectorAll('.slide-in');
 
 function checkSlide(event) {
   sliderImages.forEach(function (sliderImage) {
-    console.log(sliderImage.clientHeight);
     var slideInAt = window.scrollY + window.innerHeight - sliderImage.clientHeight / 2; // daje nam ilosc px (w polowie obrazka)przy ktorej mamy uruchomic slide in obrazka
 
     var imageBottom = sliderImage.offsetTop + sliderImage.clientHeight; //bottom of the image
@@ -211,7 +210,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53848" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53867" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

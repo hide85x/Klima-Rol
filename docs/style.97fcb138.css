@@ -172,6 +172,8 @@ body {
 @media (max-width: 1000px) {
   .sidebarnav {
     margin-top: 105px;
+    width: 250px;
+    height: 250px;
   }
 }
 .sidebarnav a, .sidebarnav i {
@@ -306,7 +308,7 @@ body {
   transform: scale(1.6);
   cursor: pointer;
   box-shadow: 0 0 100px 10px orangered;
-  z-index: 28;
+  z-index: 1;
 }
 .card:hover img {
   z-index: 999;
@@ -314,7 +316,7 @@ body {
 }
 @media (max-width: 1000px) {
   .card:hover {
-    transform: scale(1.6);
+    transform: scale(1.4);
   }
 }
 

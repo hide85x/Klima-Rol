@@ -188,7 +188,9 @@ body {
     transform: translateY(-1000px);
     transition:transform 0.5s ease-in, background-color 1s ease-in;
     @media (max-width:1000px) {
-        margin-top:105px
+        margin-top:105px;
+        width: 250px;
+        height: 250px;
     }
     a, i {
         margin-bottom: 5px;
@@ -333,9 +335,9 @@ transition: transform 0.3s 0.1s ease-in-out
         }
         cursor: pointer;
         box-shadow: 0 0 100px 10px  orangered;
-        z-index: 28   ;
+        z-index: 1   ;
         @media (max-width:1000px) {
-            transform: scale(1.6) 
+            transform: scale(1.4) 
     
         }
 

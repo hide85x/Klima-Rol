@@ -31,7 +31,6 @@ const sliderImages = document.querySelectorAll('.slide-in');
 
 function checkSlide(event) {
     sliderImages.forEach(sliderImage => {
-        console.log(sliderImage.clientHeight)
         const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.clientHeight / 2
         // daje nam ilosc px (w polowie obrazka)przy ktorej mamy uruchomic slide in obrazka
         const imageBottom = sliderImage.offsetTop + sliderImage.clientHeight //bottom of the image
