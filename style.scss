@@ -324,6 +324,12 @@ transition: transform 0.3s 0.1s ease-in-out
             width: 100%;
             transition: all 0.3s ease-in;
             opacity: 0.5;
+            @media (max-width:700px) {
+                margin: 0;
+                padding: 0;
+                opacity: 1;
+         
+             }
         }
     }
     
@@ -337,7 +343,7 @@ transition: transform 0.3s 0.1s ease-in-out
         box-shadow: 0 0 100px 10px  orangered;
         z-index: 1   ;
         @media (max-width:1000px) {
-            transform: none
+            transform: none;
     
         }
 
