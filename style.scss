@@ -21,7 +21,6 @@ a {
 body {
     display: flex;
     flex-direction: column;
-    width: 100%;
     // font-family: 'Fira Code', sans-serif;
     font-family: 'Quicksand', sans-serif;
     background-image: linear-gradient( orangered, orange, orangered );
@@ -52,6 +51,7 @@ body {
              transform: scale(1);
              cursor: pointer;
              transition: transform 0.2s ease-in, color 0.3s ease-in;
+             font-size: 1.5rem;
          }
          i:hover {
              transform: scale(1.2);
@@ -227,7 +227,7 @@ body {
 }
 .hamburger__box {
     border:1px solid orangered;
-    padding: 25px;
+    padding: 5px;
     width:40px;
     height: 24px;
     display: inline-block;
