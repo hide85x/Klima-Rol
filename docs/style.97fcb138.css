@@ -297,7 +297,7 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.5);
+  transform: scale(1.6);
   cursor: pointer;
   box-shadow: 0 0 100px 10px orangered;
   z-index: 28;
@@ -308,7 +308,7 @@ body {
 }
 @media (max-width: 1000px) {
   .card:hover {
-    transform: scale(1.3);
+    transform: scale(1.6);
   }
 }
 
