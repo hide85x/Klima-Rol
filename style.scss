@@ -390,11 +390,12 @@ transition: transform 0.3s 0.1s ease-in-out
 
     .slideshow-container {
         display: flex;
-        max-width: 1000px;
+        max-width: 900px;
         position: relative;
         margin: auto; 
         a {
-            color: black;
+            color: orangered;
+            
         }
         img {
             display: flex;
@@ -418,12 +419,12 @@ transition: transform 0.3s 0.1s ease-in-out
         width: auto;
         margin-top: -22px;
         padding: 16px;
-        color: white;
         font-weight: bold;
         font-size: 18px;
-        transition: 0.6s ease;
         border-radius: 13px 0 0 13px;
         user-select: none;
+
+
     }
     
     /* Position the "next button" to the right */
@@ -434,7 +435,8 @@ transition: transform 0.3s 0.1s ease-in-out
       
       /* On hover, add a black background color with a little bit see-through */
       .prev:hover, .next:hover {
-        background-color: orangered;
+        border: 1px solid orangered;
+
       }
       
 
