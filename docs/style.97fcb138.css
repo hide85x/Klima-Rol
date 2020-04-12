@@ -210,7 +210,7 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 1.8em;
-  color: white;
+  color: black;
 }
 @media (max-width: 700px) {
   .sidebarnav a, .sidebarnav i {
@@ -218,11 +218,11 @@ body {
   }
 }
 .sidebarnav a:hover, .sidebarnav i:hover {
-  color: orangered;
+  color: white;
 }
 
 .sidebarnav--active {
-  background-color: rgba(0, 0, 0, 0.836);
+  background-color: rgba(255, 68, 0, 0.952);
   transform: scale(0.9) translateY(150px);
 }
 @media (max-width: 1000px) {
