@@ -49,18 +49,15 @@ window.addEventListener('scroll', checkSlide) // loguje event scroll
 // const masonry= new Macy({
 //     container: '.gallery',
 //     mobileFirst: true,
-//     columns:6,
-//     breakAt: {
-//         400:2,
-//         1500:5,
-//         1100:6
-//     },
+//     columns:4,
 //     margin: {
-//         x:20,
-//         y:40
+//         x:0,
+//         y:0
 //     }
 // });
 
+
+// external js: flickity.pkgd.js
 // const body= document.querySelector('.gallery'); 
 
 // const addDarkBg= ()=> {

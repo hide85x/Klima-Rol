@@ -32,7 +32,7 @@ body {
   justify-content: space-between;
   width: 100%;
   z-index: 23;
-  opacity: 0.9;
+  opacity: 0.7;
   margin-bottom: 100px;
   border: 3px solid orangered;
   color: #ff3c00;
@@ -353,6 +353,113 @@ footer {
   margin-top: 200px;
   background-color: rgba(0, 0, 0, 0.973);
   color: orangered;
+}
+
+.gallery {
+  background-color: black;
+  margin: auto;
+}
+
+.carousel-wrapper {
+  margin: 50px 0;
+  position: relative;
+  height: 700px;
+  width: 70%;
+}
+@media (max-width: 800px) {
+  .carousel-wrapper {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+  color: orangered;
+  border: 2px solid orangered;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+.arrow-prev {
+  left: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+@media (max-width: 800px) {
+  .arrow-prev {
+    left: 10px;
+  }
+}
+
+.arrow-next {
+  right: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+@media (max-width: 800px) {
+  .arrow-next {
+    right: 10px;
+  }
+}
+
+.light {
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .arrow, .light .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+}
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background-image: url("/auto 010.63dd0b67.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.item-2 {
+  background-image: url("/auto 008.d431e38c.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.item-3 {
+  background-image: url("/auto 007.5b346826.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+*:target ~ .item-1 {
+  opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+  opacity: 1;
+}
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

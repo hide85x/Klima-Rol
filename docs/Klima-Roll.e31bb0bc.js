@@ -167,17 +167,13 @@ window.addEventListener('scroll', checkSlide); // loguje event scroll
 // const masonry= new Macy({
 //     container: '.gallery',
 //     mobileFirst: true,
-//     columns:6,
-//     breakAt: {
-//         400:2,
-//         1500:5,
-//         1100:6
-//     },
+//     columns:4,
 //     margin: {
-//         x:20,
-//         y:40
+//         x:0,
+//         y:0
 //     }
 // });
+// external js: flickity.pkgd.js
 // const body= document.querySelector('.gallery'); 
 // const addDarkBg= ()=> {
 //     body.style.opacity='0.2'
@@ -210,7 +206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56942" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59274" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
