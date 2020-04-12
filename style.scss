@@ -92,6 +92,13 @@ body {
             font-size: 1.4rem;
             padding: 0;
         }
+        h1 {
+            @media (min-width:1800px ) {
+                margin-top: 200px
+                
+            }
+        }
+        
 
         .heroImg{
             margin: -208px;
@@ -107,11 +114,7 @@ body {
                 margin: auto ;
                 padding: 0;
             }
-            
-            h1 {
-            }
-            p {
-            }
+
         }
 
         
@@ -133,12 +136,16 @@ body {
         opacity: 1;
         transform: translateX(0%) scale(1);
       }
+      .break {
+          height: 50px;
+      }
     &__row {
         background-color: rgb(0, 0, 0);
         color: orangered;
         display: flex;
         flex-wrap: wrap;
-        margin: 100px auto;
+        margin: auto;
+        margin-bottom: 150px;
         box-shadow: 0 4px 16px -2px gray;
         // mozna dodac padding dla duzych monitorow
         
@@ -206,7 +213,6 @@ body {
     align-self: center;
     justify-content: center;
     position: fixed;
-    border:33px solid rgba(255, 68, 0, 0.685);
     width: 500px;
     height: 500px;
     font-size: 1.3rem;
@@ -421,6 +427,7 @@ transition: transform 0.3s 0.1s ease-in-out
         padding: 16px;
         font-weight: bold;
         font-size: 18px;
+        transition:border 0.6s ease-in;
         border-radius: 13px 0 0 13px;
         user-select: none;
 
@@ -441,31 +448,6 @@ transition: transform 0.3s 0.1s ease-in-out
       
 
       
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
-      
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-      
-      .active, .dot:hover {
-        background-color: #717171;
-      }
-      
       /* Fading animation */
       .fade {
         -webkit-animation-name: fade;
@@ -475,11 +457,11 @@ transition: transform 0.3s 0.1s ease-in-out
       }
       
       @-webkit-keyframes fade {
-        from {opacity: .4}
+        from {opacity: .2}
         to {opacity: 1}
       }
       
       @keyframes fade {
-        from {opacity: .4}
+        from {opacity: .2}
         to {opacity: 1}
       }
