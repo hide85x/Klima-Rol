@@ -48,12 +48,22 @@ window.addEventListener('scroll', checkSlide) // loguje event scroll
 
 
 
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
+//jebana galeria...
+
 let slideIndex = 1;
 
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+prev.addEventListener('click', ()=> {
+    plusSlides(-1)
+});
+next.addEventListener('click', ()=> {
+    plusSlides(1)
+});
 
 
+showSlides();
 // Next/previous controls
 
 function showSlides(n) {
@@ -69,8 +79,8 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
+
 function plusSlides(n) {
-    console.log(n)
     showSlides(slideIndex += n);
 }
 
@@ -78,21 +88,13 @@ function plusSlides(n) {
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-prev.addEventListener('click', ()=> {
-    plusSlides(-1)
-});
-next.addEventListener('click', ()=> {
-    plusSlides(1)
-});
 
 
 
 
 
 
-function newFunction() {
-    return plusSlides(-1);
-}
+
 // const masonry= new Macy({
 //     container: '.gallery',
 //     mobileFirst: true,

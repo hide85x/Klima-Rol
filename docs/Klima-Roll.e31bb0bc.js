@@ -164,10 +164,18 @@ function checkSlide(event) {
 }
 
 window.addEventListener('scroll', checkSlide); // loguje event scroll
+//jebana galeria...
 
+var slideIndex = 1;
 var prev = document.querySelector('.prev');
 var next = document.querySelector('.next');
-var slideIndex = 1; // Next/previous controls
+prev.addEventListener('click', function () {
+  plusSlides(-1);
+});
+next.addEventListener('click', function () {
+  plusSlides(1);
+});
+showSlides(); // Next/previous controls
 
 function showSlides(n) {
   var i;
@@ -190,24 +198,12 @@ function showSlides(n) {
 }
 
 function plusSlides(n) {
-  console.log(n);
   showSlides(slideIndex += n);
 } // Thumbnail image controls
 
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
-}
-
-prev.addEventListener('click', function () {
-  plusSlides(-1);
-});
-next.addEventListener('click', function () {
-  plusSlides(1);
-});
-
-function newFunction() {
-  return plusSlides(-1);
 } // const masonry= new Macy({
 //     container: '.gallery',
 //     mobileFirst: true,
@@ -250,7 +246,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65093" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49305" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
