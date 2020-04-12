@@ -48,7 +48,40 @@ window.addEventListener('scroll', checkSlide) // loguje event scroll
 
 
 
+const prev= document.querySelector('.prev');
+console.log(prev)
+const next= document.querySelector('.next');
+let slideIndex = 1;
 
+
+
+// Next/previous controls
+
+function showSlides(n) {
+    let i;
+    let slides = document.querySelectorAll(".mySlides");
+    console.log(slides)
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+
+  slides[slideIndex-1].style.display = "block";
+} 
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+prev.addEventListener('click', plusSlides(-1));
+next.addEventListener('click', plusSlides(1));
 
 
 
