@@ -104,41 +104,32 @@
                 <img src="img/auto 2 004.jpg" alt="">
             </div>
 
-        </div> -->
-<div class="gallery">
+        </div>
+ -->
 
-          <div class="carousel">
-            <input type="checkbox" class="faux-ui-facia"> 
-            <div class="slide" slide="5" ">
-              <img src="img/auto 014.jpg" alt="Slide 5">
-            </div>
-            
-            
-            <input type="checkbox" class="faux-ui-facia"> 
-            <div class="slide" slide="4" >
-              <img src="img/auto 2 006.jpg" alt="Slide 4">
-            </div>
-          
-            <input type="checkbox" class="faux-ui-facia"> 
-            <div class="slide" slide="3" >
-              <img src="img/auto 2 011.jpg"  alt="Slide 3">
-            </div>
-          
-            <input type="checkbox" class="faux-ui-facia">
-            <div class="slide" slide="2" >
-              <img src="img/auto 2 010.jpg"  alt="Slide 2">
-            </div>
-          
-            <input type="checkbox" class="faux-ui-facia">
-          
-            <div class="slide" slide="1" >
-              <img src="img/auto 2 002.jpg" alt="Slide 1">
-            </div>
-             
-           
-          </div>
-              
-</div>
+ <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="img/auto 015.jpg" >
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="img/auto 2 004.jpg" >
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="img/auto 010.jpg" >
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+
+
         <footer>
             <h2>contaxc us</h2>
         
@@ -146,7 +137,33 @@
 
 
     </main>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
 
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.querySelectorAll(".mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+</script>
 <script  src="index.js">
 
 </script>

@@ -46,6 +46,14 @@ function checkSlide(event) {
 window.addEventListener('scroll', checkSlide) // loguje event scroll
 
 
+
+
+
+
+
+
+
+
 // const masonry= new Macy({
 //     container: '.gallery',
 //     mobileFirst: true,
