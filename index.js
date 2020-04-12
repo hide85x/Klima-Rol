@@ -48,9 +48,8 @@ window.addEventListener('scroll', checkSlide) // loguje event scroll
 
 
 
-const prev= document.querySelector('.prev');
-console.log(prev)
-const next= document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 let slideIndex = 1;
 
 
@@ -59,34 +58,41 @@ let slideIndex = 1;
 
 function showSlides(n) {
     let i;
-    let slides = document.querySelectorAll(".mySlides");
-    console.log(slides)
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    
 
-  slides[slideIndex-1].style.display = "block";
-} 
-showSlides(slideIndex);
+    console.log('should work')
+    slides[slideIndex - 1].style.display = "block";
+}
 
 function plusSlides(n) {
+    console.log(n)
     showSlides(slideIndex += n);
-  }
-  
-  // Thumbnail image controls
-  function currentSlide(n) {
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
     showSlides(slideIndex = n);
-  }
-prev.addEventListener('click', plusSlides(-1));
-next.addEventListener('click', plusSlides(1));
+}
+prev.addEventListener('click', ()=> {
+    plusSlides(-1)
+});
+next.addEventListener('click', ()=> {
+    plusSlides(1)
+});
 
 
 
 
 
+
+function newFunction() {
+    return plusSlides(-1);
+}
 // const masonry= new Macy({
 //     container: '.gallery',
 //     mobileFirst: true,

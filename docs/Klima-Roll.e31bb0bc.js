@@ -166,14 +166,12 @@ function checkSlide(event) {
 window.addEventListener('scroll', checkSlide); // loguje event scroll
 
 var prev = document.querySelector('.prev');
-console.log(prev);
 var next = document.querySelector('.next');
 var slideIndex = 1; // Next/previous controls
 
 function showSlides(n) {
   var i;
-  var slides = document.querySelectorAll(".mySlides");
-  console.log(slides);
+  var slides = document.getElementsByClassName("mySlides");
 
   if (n > slides.length) {
     slideIndex = 1;
@@ -187,12 +185,12 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
 
+  console.log('should work');
   slides[slideIndex - 1].style.display = "block";
 }
 
-showSlides(slideIndex);
-
 function plusSlides(n) {
+  console.log(n);
   showSlides(slideIndex += n);
 } // Thumbnail image controls
 
@@ -201,8 +199,16 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-prev.addEventListener('click', plusSlides(-1));
-next.addEventListener('click', plusSlides(1)); // const masonry= new Macy({
+prev.addEventListener('click', function () {
+  plusSlides(-1);
+});
+next.addEventListener('click', function () {
+  plusSlides(1);
+});
+
+function newFunction() {
+  return plusSlides(-1);
+} // const masonry= new Macy({
 //     container: '.gallery',
 //     mobileFirst: true,
 //     columns:4,
@@ -244,7 +250,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64366" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65093" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
