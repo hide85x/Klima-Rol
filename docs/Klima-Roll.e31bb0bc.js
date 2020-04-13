@@ -129,20 +129,28 @@ var addClass = function addClass() {
 };
 
 el.addEventListener('click', addClass);
-sidenav.addEventListener('click', addClass); // function debounce(func, wait = 30, immediate = true) {
-//     var timeout;
-//     return function() {
-//       var context = this, args = arguments;
-//       var later = function() {
-//         timeout = null;
-//         if (!immediate) func.apply(context, args);
-//       };
-//       var callNow = immediate && !timeout;
-//       clearTimeout(timeout);
-//       timeout = setTimeout(later, wait);
-//       if (callNow) func.apply(context, args);
-//     };
-//   }
+sidenav.addEventListener('click', addClass);
+
+function debounce(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 30;
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+  var timeout;
+  return function () {
+    var context = this,
+        args = arguments;
+
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+} //our side  bar
+
 
 var sliderImages = document.querySelectorAll('.slide-in');
 
@@ -164,7 +172,7 @@ function checkSlide(event) {
 }
 
 window.addEventListener('scroll', checkSlide); // loguje event scroll
-//jebana galeria...
+//carousel gallery
 
 var slideIndex = 1;
 var prev = document.querySelector('.prev');
@@ -193,7 +201,6 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
 
-  console.log('should work');
   slides[slideIndex - 1].style.display = "block";
 }
 
@@ -204,20 +211,7 @@ function plusSlides(n) {
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
-} // const masonry= new Macy({
-//     container: '.gallery',
-//     mobileFirst: true,
-//     columns:4,
-//     margin: {
-//         x:0,
-//         y:0
-//     }
-// });
-// external js: flickity.pkgd.js
-// const body= document.querySelector('.gallery'); 
-// const addDarkBg= ()=> {
-//     body.style.opacity='0.2'
-// }
+}
 },{}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -246,7 +240,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50967" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54395" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

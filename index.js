@@ -12,21 +12,24 @@ sidenav.addEventListener('click', addClass)
 
 
 
-// function debounce(func, wait = 30, immediate = true) {
-//     var timeout;
-//     return function() {
-//       var context = this, args = arguments;
-//       var later = function() {
-//         timeout = null;
-//         if (!immediate) func.apply(context, args);
-//       };
-//       var callNow = immediate && !timeout;
-//       clearTimeout(timeout);
-//       timeout = setTimeout(later, wait);
-//       if (callNow) func.apply(context, args);
-//     };
-//   }
+function debounce(func, wait = 30, immediate = true) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
 
+
+
+//our side  bar
 const sliderImages = document.querySelectorAll('.slide-in');
 
 function checkSlide(event) {
@@ -48,7 +51,7 @@ window.addEventListener('scroll', checkSlide) // loguje event scroll
 
 
 
-//jebana galeria...
+//carousel gallery
 
 let slideIndex = 1;
 
@@ -74,41 +77,13 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-
-    console.log('should work')
     slides[slideIndex - 1].style.display = "block";
 }
-
-
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
-
 // Thumbnail image controls
+
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-
-
-
-
-
-
-
-// const masonry= new Macy({
-//     container: '.gallery',
-//     mobileFirst: true,
-//     columns:4,
-//     margin: {
-//         x:0,
-//         y:0
-//     }
-// });
-
-
-// external js: flickity.pkgd.js
-// const body= document.querySelector('.gallery'); 
-
-// const addDarkBg= ()=> {
-//     body.style.opacity='0.2'
-// }
