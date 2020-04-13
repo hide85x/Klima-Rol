@@ -26,8 +26,6 @@ body {
 }
 
 .nav {
-  left: -1px;
-  margin: auto;
   display: flex;
   position: fixed;
   justify-content: space-between;
