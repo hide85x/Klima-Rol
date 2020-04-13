@@ -1,3 +1,19 @@
+const swal= require('sweetalert2')
+
+const tel= document.querySelector('.fa-phone');
+console.log(tel)
+tel.addEventListener('click', ()=> {
+    swal.fire({
+        title: 'Call Us',
+        text: "+48 898 666 666",
+        confirmButtonColor:"#000000" ,
+        confirmButtonText: 'Ok',
+        background: '#FF4500',
+        buttonStyling:'false',
+        
+    })
+})
+
 const closenav = document.querySelector('.closenav')
 const sidenav = document.querySelector('.sidebarnav')
 const el = document.querySelector('.hamburger');

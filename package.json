@@ -9,7 +9,9 @@
     "start": "parcel index.html --out-dir docs "
   },
   "dependencies": {
-    "parcel": "^1.12.4"
+    "@sweetalert2/theme-dark": "^3.1.4",
+    "parcel": "^1.12.4",
+    "sweetalert2": "^9.10.10"
   },
   "repository": {
     "type": "git",
