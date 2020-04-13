@@ -1,19 +1,17 @@
 const swal= require('sweetalert2')
-
+const h1= document.createElement('a');
+h1.innerHTML= "click to call"
+h1.href="tel:+48795647613";
+console.log(h1.href)
 const tel= document.querySelector('.fa-phone');
 console.log(tel)
 tel.addEventListener('click', ()=> {
     swal.fire({
+        html: h1,
         title: 'Call Us',
-        text: "+48 898 666 666",
-        confirmButtonColor:"#000000" ,
-        color:"#000000",
         width: "300px",
-        confirmButtonText: 'Ok',
         background: '#FF4500',
-        buttonStyling:'false',
-        allowEscapeKey:'true',
-        allowEnterKey:"true",
+        showConfirmButton: false,
         showCloseButton: "true"
         
     })
