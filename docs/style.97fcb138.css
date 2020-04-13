@@ -51,7 +51,7 @@ body {
   padding: 2px;
   transform: scale(1);
   cursor: pointer;
-  transition: transform 0.2s ease-in, color 0.3s ease-in;
+  transition: transform 0.2s ease, color 0.3s ease-in;
   font-size: 2.5rem;
 }
 @media (max-width: 700px) {
@@ -174,13 +174,15 @@ body {
 .main__row__i i {
   color: orangered;
   text-shadow: 9px 9px 1px rgba(255, 0, 0, 0.397);
+  font-size: 2.5rem;
   padding: 60px;
   opacity: 0.9;
 }
 @media (max-width: 1000px) {
   .main__row__i i {
-    margin: auto;
+    margin: auto 15px;
     padding: 5px;
+    font-size: 1.5rem;
   }
 }
 
@@ -502,6 +504,12 @@ footer .two {
 }
 footer .two .social i {
   margin: 20px;
+  font-size: 2rem;
+  transition: transform 0.2s ease;
+}
+footer .two .social i:hover {
+  transform: scale(1.2);
+  color: rgba(255, 0, 0, 0.918);
 }
 footer .three {
   font-size: 1rem;
