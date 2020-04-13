@@ -7,14 +7,17 @@ tel.addEventListener('click', ()=> {
         title: 'Call Us',
         text: "+48 898 666 666",
         confirmButtonColor:"#000000" ,
+        color:"#000000",
         confirmButtonText: 'Ok',
         background: '#FF4500',
         buttonStyling:'false',
+        allowEscapeKey:'true',
+        allowEnterKey:"true",
+        showCloseButton: "true"
         
     })
 })
 
-const closenav = document.querySelector('.closenav')
 const sidenav = document.querySelector('.sidebarnav')
 const el = document.querySelector('.hamburger');
 

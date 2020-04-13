@@ -3197,12 +3197,15 @@ tel.addEventListener('click', function () {
     title: 'Call Us',
     text: "+48 898 666 666",
     confirmButtonColor: "#000000",
+    color: "#000000",
     confirmButtonText: 'Ok',
     background: '#FF4500',
-    buttonStyling: 'false'
+    buttonStyling: 'false',
+    allowEscapeKey: 'true',
+    allowEnterKey: "true",
+    showCloseButton: "true"
   });
 });
-var closenav = document.querySelector('.closenav');
 var sidenav = document.querySelector('.sidebarnav');
 var el = document.querySelector('.hamburger');
 
@@ -3324,7 +3327,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55976" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56145" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
