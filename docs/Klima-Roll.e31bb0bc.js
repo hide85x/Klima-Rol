@@ -3191,15 +3191,15 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 var swal = require('sweetalert2');
 
 var h1 = document.createElement('a');
-h1.innerHTML = "click to call";
-h1.href = "tel:+48795647613";
+h1.innerHTML = "795647613";
+h1.href = "tel: +48795647613";
 console.log(h1.href);
 var tel = document.querySelector('.fa-phone');
 console.log(tel);
 tel.addEventListener('click', function () {
   swal.fire({
-    html: h1,
-    title: 'Call Us',
+    html: 'click above to call',
+    title: h1,
     width: "300px",
     background: '#FF4500',
     showConfirmButton: false,
@@ -3212,7 +3212,6 @@ var el = document.querySelector('.hamburger');
 var addClass = function addClass() {
   el.classList.toggle('hamburger--active');
   sidenav.classList.toggle('sidebarnav--active');
-  nav.classList.toggle('nav--actv');
 };
 
 el.addEventListener('click', addClass);
@@ -3327,7 +3326,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63359" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63497" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

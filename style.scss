@@ -53,9 +53,10 @@ body {
              transform: scale(1);
              cursor: pointer;
              transition: transform 0.2s ease-in, color 0.3s ease-in;
-             font-size: 1.5rem;
+             font-size: 2.5rem;
              @media (max-width:700px) {
                  margin:0 0 0 5px;
+                 font-size: 1.5rem;
              }
          }
          i:hover {
@@ -264,10 +265,14 @@ body {
 .hamburger__box {
     border:1px solid orangered;
     padding: 5px;
-    width:40px;
-    height: 24px;
+    width:55px;
+    height: 44px;
     display: inline-block;
     position: relative;
+    @media(max-width:700px) {
+        width: 35px;
+        height: 27px;
+    }
   
 }
 @mixin hamburger-line {

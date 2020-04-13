@@ -1,14 +1,14 @@
 const swal= require('sweetalert2')
 const h1= document.createElement('a');
-h1.innerHTML= "click to call"
-h1.href="tel:+48795647613";
+h1.innerHTML= "795647613"
+h1.href="tel: +48795647613";
 console.log(h1.href)
 const tel= document.querySelector('.fa-phone');
 console.log(tel)
 tel.addEventListener('click', ()=> {
     swal.fire({
-        html: h1,
-        title: 'Call Us',
+        html: 'click above to call',
+        title: h1,
         width: "300px",
         background: '#FF4500',
         showConfirmButton: false,
@@ -23,7 +23,6 @@ const el = document.querySelector('.hamburger');
 const addClass = () => {
     el.classList.toggle('hamburger--active');
     sidenav.classList.toggle('sidebarnav--active')
-    nav.classList.toggle('nav--actv')
 }
 el.addEventListener('click', addClass)
 sidenav.addEventListener('click', addClass)
