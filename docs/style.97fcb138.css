@@ -444,14 +444,14 @@ footer .one .mapouter {
   margin: 20px auto;
   position: relative;
   text-align: right;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
 }
 footer .one .gmap_canvas {
   box-shadow: 0 0 10px 3px black;
   overflow: hidden;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
 }
 footer .two {
   display: flex;
