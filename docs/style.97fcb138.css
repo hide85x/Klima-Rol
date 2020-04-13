@@ -19,6 +19,8 @@ a {
 body {
   overflow-x: hidden;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   font-family: "Quicksand", sans-serif;
   background-image: linear-gradient(orangered, orange, orangered);

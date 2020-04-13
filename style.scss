@@ -21,6 +21,8 @@ a {
 body {
     overflow-x: hidden;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     // font-family: 'Fira Code', sans-serif;
     font-family: 'Quicksand', sans-serif;
