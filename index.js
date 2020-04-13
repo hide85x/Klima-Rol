@@ -8,6 +8,7 @@ tel.addEventListener('click', ()=> {
         text: "+48 898 666 666",
         confirmButtonColor:"#000000" ,
         color:"#000000",
+        width: "300px",
         confirmButtonText: 'Ok',
         background: '#FF4500',
         buttonStyling:'false',
