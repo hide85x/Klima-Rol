@@ -44,20 +44,20 @@ body {
   align-items: center;
   justify-content: flex-end;
   justify-self: flex-end;
-  margin-right: 20px;
   transform: scale(1);
-  gap: 10px;
 }
 .nav .social i {
-  padding: 2px;
+  margin: 0 0 0 10px;
+  padding: 10px;
   transform: scale(1);
   cursor: pointer;
   transition: transform 0.2s ease, color 0.3s ease-in;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .nav .social i {
-    margin: 0 0 0 5px;
+    padding: 5px;
+    margin: 0;
     font-size: 1.5rem;
   }
 }
@@ -153,7 +153,7 @@ body {
   .main__row {
     flex-direction: column;
     align-items: center;
-    margin: 5px auto;
+    margin: 120px auto;
     padding: 0;
   }
 }
@@ -462,7 +462,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-top: 200px;
+  margin-top: 100px;
   background-color: rgba(0, 0, 0, 0.973);
   color: orangered;
 }
@@ -544,8 +544,9 @@ footer .two .social i {
 }
 @media (max-width: 550px) {
   footer .two .social i {
+    display: flex;
     font-size: 1.3rem;
-    margin: 10px auto;
+    margin: 10px 5px;
     flex-direction: column;
   }
 }
