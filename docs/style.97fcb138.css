@@ -407,11 +407,6 @@ body {
   border-radius: 13px 0 0 13px;
   user-select: none;
 }
-@media (max-width: 600) {
-  .prev, .next {
-    display: none;
-  }
-}
 
 /* Position the "next button" to the right */
 .next {
@@ -531,15 +526,15 @@ footer .two {
   grid-row-end: 1;
   grid-column-start: 2;
   grid-column-end: 3;
+  text-decoration: none;
 }
 footer .two .social {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 footer .two .social i {
   font-size: 1.5em;
   padding: 0;
-  margin: 0;
-  margin: 20px;
+  margin: 0 15px 15px 5px;
   transition: transform 0.2s ease;
 }
 @media (max-width: 550px) {
