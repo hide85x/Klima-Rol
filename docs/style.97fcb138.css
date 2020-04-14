@@ -556,17 +556,23 @@ footer .two .social i:hover {
 }
 footer .three {
   font-size: 1rem;
-  width: 100%;
-  margin: 0;
   padding: 5px;
+  margin: 5px auto;
   text-align: center;
   color: black;
   background-color: rgba(255, 68, 0, 0.863);
-  box-shadow: 0 0 10px 3px black;
   grid-column-start: 4;
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
+}
+footer .three p {
+  padding: 0;
+  margin: 0;
+}
+footer .three a:hover {
+  font-weight: 600;
+  text-decoration-line: underline;
 }
 
 /*# sourceMappingURL=/style.97fcb138.css.map */
