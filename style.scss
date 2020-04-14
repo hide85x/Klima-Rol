@@ -3,6 +3,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 a {
     color: inherit;
@@ -19,6 +20,7 @@ a {
   }
 
 body {
+    
     overflow-x: hidden;
     display: flex;
     width: 100%;
@@ -553,10 +555,18 @@ transition: transform 0.3s 0.1s ease-in-out
             grid-column-start: 2;
             grid-column-end: 3;
             .social {
+                font-size: 1.3rem;
                 i {
+                    font-size: 1.5em;
+                    padding: 0;
+                    margin: 0;
                     margin: 20px;
-                    font-size: 2rem;
                     transition: transform 0.2s ease;
+                    @media (max-width:550px) {
+                        font-size: 1.3rem;
+                        margin: 10px auto;
+                        flex-direction: column;
+                    }
                     &:hover {
                         transform: scale(1.2);
                         color: rgba(255, 0, 0, 0.918);

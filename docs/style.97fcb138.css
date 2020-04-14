@@ -1,6 +1,7 @@
 @import url(https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css);
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -531,10 +532,22 @@ footer .two {
   grid-column-start: 2;
   grid-column-end: 3;
 }
+footer .two .social {
+  font-size: 1.3rem;
+}
 footer .two .social i {
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0;
   margin: 20px;
-  font-size: 2rem;
   transition: transform 0.2s ease;
+}
+@media (max-width: 550px) {
+  footer .two .social i {
+    font-size: 1.3rem;
+    margin: 10px auto;
+    flex-direction: column;
+  }
 }
 footer .two .social i:hover {
   transform: scale(1.2);
