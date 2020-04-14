@@ -69,9 +69,8 @@ body {
 .main {
 
     .hero {
-        margin:50px 200px 10px 200px;
+        margin:50px 200px 150px 200px;
         padding: 0;
-        height: 100vh;
         font-weight: 900;
         text-align: center;
         // border-bottom: 2px solid black;
@@ -81,7 +80,10 @@ body {
         flex-direction: column;
         align-self: flex-end;
         justify-self: flex-end;
-        
+        @media (min-width: 1500px){
+            margin:50px 200px 270px 200px;
+            
+        }
         @media (max-width:1000px){
             margin: 50px auto;
             font-size: 1.4rem;
@@ -90,13 +92,20 @@ body {
         h1 {
             padding-top: 0;;
             @media (min-width:1800px ) {
-                margin-top: 100px
+                margin-top: 50px
                 
             }
         }
         p {
             padding: 10px ;
+            font-weight: 600;
+        }
+        .consultingP {
+            font-size: 1.7rem;
             font-weight: 100;
+            a {
+                font-weight: 900;
+            }
         }
         
 
@@ -143,7 +152,6 @@ body {
         color: orangered;
         display: flex;
         flex-wrap: wrap;
-        margin: auto;
         margin-bottom: 150px;
         box-shadow: 0 4px 16px -2px gray;
         // mozna dodac padding dla duzych monitorow
@@ -151,13 +159,14 @@ body {
             @media (max-width:1000px){
                 flex-direction: column;
                 align-items: center;
-                margin: 50px auto;
+                margin: 5px auto;
                 padding: 0;
             }
     
         img {
-            width: 40%;
-            min-width: 200px;
+            width: 50%;
+            height: auto ;
+            object-fit: contain;
         }
     
         &__content {
@@ -167,7 +176,7 @@ body {
             text-align: left;
             margin: auto;
             padding: 20px 100px;
-            width: 60%;
+            width: 50%;
             font-size: 1.8rem;
             @media (max-width:1000px){
                 width: 100%;
@@ -333,21 +342,7 @@ transition: transform 0.3s 0.1s ease-in-out
 
 
 
-  .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 20px;
-    background-color:black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    @media (max-width:1000px) {
-       margin: 0;
-       padding: 0;
 
-    }
-}
       .card {
         padding: 5px;
         transform: scale(1);
@@ -390,7 +385,14 @@ transition: transform 0.3s 0.1s ease-in-out
 
 
 
-
+    .gallery {
+      background-color:black;
+      @media (max-width:1000px) {
+         margin: 0;
+         padding: 0;
+  
+      }
+  }
 
 
     .slideshow-container {
@@ -404,9 +406,10 @@ transition: transform 0.3s 0.1s ease-in-out
         }
         img {
             display: flex;
-            width: 80%;
+            width: 90%;
             height: auto;
             margin: auto;
+            object-fit: cover;
         }
       }
 
@@ -429,6 +432,9 @@ transition: transform 0.3s 0.1s ease-in-out
         transition:border 0.6s ease-in;
         border-radius: 13px 0 0 13px;
         user-select: none;
+        @media (max-width:600) {
+            display: none;
+        }
 
 
     }
@@ -442,7 +448,11 @@ transition: transform 0.3s 0.1s ease-in-out
       /* On hover, add a black background color with a little bit see-through */
       .prev:hover, .next:hover {
         border: 1px solid orangered;
-
+        cursor: pointer;
+        @media (max-width:700px) {
+            transform: scale(1.2);
+            border: none;
+        }
       }
       
 
@@ -503,16 +513,27 @@ transition: transform 0.3s 0.1s ease-in-out
                 margin: 20px auto;
                 position: relative;
                 text-align: right;
-                height: 330px;
-                width: 330px;
+                height: 500px;
+                width: 500px;
+                @media (max-width:700px) {
+                    height: 300px;
+                    width: 300px;
+    
+                }
             }
 
             .gmap_canvas {
                 box-shadow: 0 0 10px 3px black;
 
                 overflow: hidden;
-                height: 330px;
-                width: 330px;
+                height: 500px;
+                width: 500px;
+                @media (max-width:700px) {
+                    height: 300px;
+                    width: 300px;
+    
+                }
+
             }
             
         }

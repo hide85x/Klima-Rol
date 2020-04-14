@@ -66,9 +66,8 @@ body {
 }
 
 .main .hero {
-  margin: 50px 200px 10px 200px;
+  margin: 50px 200px 150px 200px;
   padding: 0;
-  height: 100vh;
   font-weight: 900;
   text-align: center;
   font-size: 2.3rem;
@@ -77,6 +76,11 @@ body {
   flex-direction: column;
   align-self: flex-end;
   justify-self: flex-end;
+}
+@media (min-width: 1500px) {
+  .main .hero {
+    margin: 50px 200px 270px 200px;
+  }
 }
 @media (max-width: 1000px) {
   .main .hero {
@@ -90,12 +94,19 @@ body {
 }
 @media (min-width: 1800px) {
   .main .hero h1 {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 }
 .main .hero p {
   padding: 10px;
+  font-weight: 600;
+}
+.main .hero .consultingP {
+  font-size: 1.7rem;
   font-weight: 100;
+}
+.main .hero .consultingP a {
+  font-weight: 900;
 }
 .main .hero .heroImg {
   margin: 0 -200px;
@@ -134,7 +145,6 @@ body {
   color: orangered;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
   margin-bottom: 150px;
   box-shadow: 0 4px 16px -2px gray;
 }
@@ -142,13 +152,14 @@ body {
   .main__row {
     flex-direction: column;
     align-items: center;
-    margin: 50px auto;
+    margin: 5px auto;
     padding: 0;
   }
 }
 .main__row img {
-  width: 40%;
-  min-width: 200px;
+  width: 50%;
+  height: auto;
+  object-fit: contain;
 }
 .main__row__content {
   display: flex;
@@ -156,7 +167,7 @@ body {
   text-align: left;
   margin: auto;
   padding: 20px 100px;
-  width: 60%;
+  width: 50%;
   font-size: 1.8rem;
 }
 @media (max-width: 1000px) {
@@ -309,23 +320,6 @@ body {
   transform: translate(0px);
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-@media (max-width: 1000px) {
-  .gallery {
-    margin: 0;
-    padding: 0;
-  }
-}
-
 .card {
   padding: 5px;
   transform: scale(1);
@@ -366,6 +360,16 @@ body {
   }
 }
 
+.gallery {
+  background-color: black;
+}
+@media (max-width: 1000px) {
+  .gallery {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .slideshow-container {
   display: flex;
   max-width: 900px;
@@ -377,9 +381,10 @@ body {
 }
 .slideshow-container img {
   display: flex;
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: auto;
+  object-fit: cover;
 }
 
 /* Hide the images by default */
@@ -401,6 +406,11 @@ body {
   border-radius: 13px 0 0 13px;
   user-select: none;
 }
+@media (max-width: 600) {
+  .prev, .next {
+    display: none;
+  }
+}
 
 /* Position the "next button" to the right */
 .next {
@@ -411,6 +421,13 @@ body {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   border: 1px solid orangered;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .prev:hover, .next:hover {
+    transform: scale(1.2);
+    border: none;
+  }
 }
 
 /* Fading animation */
@@ -477,14 +494,26 @@ footer .one .mapouter {
   margin: 20px auto;
   position: relative;
   text-align: right;
-  height: 330px;
-  width: 330px;
+  height: 500px;
+  width: 500px;
+}
+@media (max-width: 700px) {
+  footer .one .mapouter {
+    height: 300px;
+    width: 300px;
+  }
 }
 footer .one .gmap_canvas {
   box-shadow: 0 0 10px 3px black;
   overflow: hidden;
-  height: 330px;
-  width: 330px;
+  height: 500px;
+  width: 500px;
+}
+@media (max-width: 700px) {
+  footer .one .gmap_canvas {
+    height: 300px;
+    width: 300px;
+  }
 }
 footer .two {
   display: flex;
