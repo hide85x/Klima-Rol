@@ -3297,7 +3297,61 @@ function plusSlides(n) {
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
+} // super smooth scrool on IE!!!!
+
+
+var navlinks = document.querySelectorAll('.navlinks');
+navlinks.forEach(function (e) {
+  return e.addEventListener('click', navLinkClick);
+}); // jesli jest napisana jako arrow funct to nie dziala :(
+
+function navLinkClick() {
+  smoothScroll(event);
 }
+
+function smoothScroll(event) {
+  event.preventDefault();
+  var targetId = event.currentTarget.getAttribute("href") === "#" ? "header" : event.currentTarget.getAttribute("href");
+  var targetPosition = document.querySelector(targetId).offsetTop;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var duration = 1000;
+  var start = null;
+  window.requestAnimationFrame(step);
+
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    var progress = timestamp - start; // window.scrollTo(0, distance*(progress/duration) + startPosition);
+
+    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
+} // Easing Functions
+
+
+function linear(t, b, c, d) {
+  return c * t / d + b;
+}
+
+;
+
+function easeInOutQuad(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t + b;
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
+}
+
+;
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t * t + b;
+  t -= 2;
+  return c / 2 * (t * t * t + 2) + b;
+}
+
+;
 },{"sweetalert2":"node_modules/sweetalert2/dist/sweetalert2.all.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -3326,7 +3380,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63400" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61318" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
