@@ -104,10 +104,12 @@ body {
 }
 .main .hero .consultingP {
   font-size: 1.7rem;
-  font-weight: 100;
+  font-weight: 500;
 }
 .main .hero .consultingP a {
+  font-size: 3rem;
   font-weight: 900;
+  text-decoration: underline;
 }
 .main .hero .heroImg {
   margin: 0 -200px;
