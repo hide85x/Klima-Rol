@@ -3312,7 +3312,7 @@ function smoothScroll(event) {
     if (!start) start = timestamp;
     var progress = timestamp - start; // window.scrollTo(0, distance*(progress/duration) + startPosition);
 
-    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+    window.scrollTo(0, linear(progress, startPosition, distance, duration));
     if (progress < duration) window.requestAnimationFrame(step);
   }
 } // Easing Functions
@@ -3395,7 +3395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50240" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51908" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

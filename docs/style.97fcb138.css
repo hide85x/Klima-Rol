@@ -99,7 +99,7 @@ body {
   }
 }
 .main .hero p {
-  padding: 10px;
+  padding: 5px;
   font-weight: 600;
 }
 .main .hero .consultingP {
@@ -107,7 +107,7 @@ body {
   font-weight: 500;
 }
 .main .hero .consultingP a {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 900;
   text-decoration: underline;
 }
@@ -171,7 +171,15 @@ body {
   margin: auto;
   padding: 20px 100px;
   width: 50%;
-  font-size: 1.8rem;
+}
+.main__row__content h3 {
+  font-size: 2rem;
+  text-decoration: underline;
+  padding-bottom: 25px;
+}
+.main__row__content p {
+  font-size: 1.5rem;
+  font-weight: 100;
 }
 @media (max-width: 1000px) {
   .main__row__content {

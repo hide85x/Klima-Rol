@@ -99,14 +99,14 @@ body {
             }
         }
         p {
-            padding: 10px ;
+            padding: 5px ;
             font-weight: 600;
         }
         .consultingP {
             font-size: 1.7rem;
             font-weight: 500;
             a {
-                font-size: 3rem;
+                font-size: 2.2rem;
                 font-weight: 900;
                 text-decoration: underline;
             }
@@ -131,7 +131,6 @@ body {
 
         
 
-        // background-image: linear-gradient(rgb(255, 124, 2),orange,  rgb(255, 255, 255));
     }
     .slide-in {
         opacity: 0;
@@ -151,6 +150,8 @@ body {
       .break {
           height: 50px;
       }
+
+      
     &__row {
         background-color: rgb(0, 0, 0);
         color: orangered;
@@ -181,7 +182,15 @@ body {
             margin: auto;
             padding: 20px 100px;
             width: 50%;
-            font-size: 1.8rem;
+            h3  {
+                font-size: 2rem;
+                text-decoration: underline;
+                padding-bottom: 25px;
+            }
+            p {
+                font-size: 1.5rem;
+                font-weight: 100;
+            }
             @media (max-width:1000px){
                 width: 100%;
                 margin: 0;
