@@ -165,6 +165,7 @@ body {
   object-fit: contain;
 }
 .main__row__content {
+  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -173,13 +174,8 @@ body {
   width: 50%;
 }
 .main__row__content h3 {
-  font-size: 2rem;
+  padding-bottom: 20px;
   text-decoration: underline;
-  padding-bottom: 25px;
-}
-.main__row__content p {
-  font-size: 1.5rem;
-  font-weight: 100;
 }
 @media (max-width: 1000px) {
   .main__row__content {

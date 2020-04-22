@@ -175,21 +175,16 @@ body {
         }
     
         &__content {
-            
+            font-size: 1.6rem;
             display: flex;
             flex-direction: column;
             text-align: left;
             margin: auto;
             padding: 20px 100px;
             width: 50%;
-            h3  {
-                font-size: 2rem;
+            h3 {
+                padding-bottom: 20px;
                 text-decoration: underline;
-                padding-bottom: 25px;
-            }
-            p {
-                font-size: 1.5rem;
-                font-weight: 100;
             }
             @media (max-width:1000px){
                 width: 100%;
