@@ -3259,46 +3259,35 @@ function checkSlide(event) {
 
 window.addEventListener('scroll', checkSlide); // loguje event scroll
 //carousel gallery
-
-var slideIndex = 1;
-var prev = document.querySelector('.prev');
-var next = document.querySelector('.next');
-prev.addEventListener('click', function () {
-  plusSlides(-1);
-});
-next.addEventListener('click', function () {
-  plusSlides(1);
-});
-showSlides(); // Next/previous controls
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-}
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-} // Thumbnail image controls
-
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-} // super smooth scrool on IE!!!!
-
+// let slideIndex = 1;
+// const prev = document.querySelector('.prev');
+// const next = document.querySelector('.next');
+// prev.addEventListener('click', ()=> {
+//     plusSlides(-1)
+// });
+// next.addEventListener('click', ()=> {
+//     plusSlides(1)
+// });
+// showSlides();
+// // Next/previous controls
+// function showSlides(n) {
+//     let i;
+//     let slides = document.getElementsByClassName("mySlides");
+//     if (n > slides.length) { slideIndex = 1 }
+//     if (n < 1) { slideIndex = slides.length }
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     slides[slideIndex - 1].style.display = "block";
+// }
+// function plusSlides(n) {
+//     showSlides(slideIndex += n);
+// }
+// // Thumbnail image controls
+// function currentSlide(n) {
+//     showSlides(slideIndex = n);
+// }
+// super smooth scrool on IE!!!!
 
 var navlinks = document.querySelectorAll('.navlinks');
 navlinks.forEach(function (e) {
@@ -3351,7 +3340,33 @@ function easeInOutCubic(t, b, c, d) {
   return c / 2 * (t * t * t + 2) + b;
 }
 
-;
+; //   <div id="gallery" class="gallery">
+//   <div class="slideshow-container">
+//       <!-- Full-width images with number and caption text -->
+//       <div class="mySlides fade">
+//           <img src="img/auto-2-002-compressor.jpg">
+//       </div>
+//       <div class="mySlides fade">
+//           <img src="img/auto-2-004-compressor.jpg">
+//       </div>
+//       <div class="mySlides fade">
+//           <img src="img/auto-012-compressor.jpg">
+//       </div>
+//       <div class="mySlides fade">
+//           <img src="img/auto-017-compressor.jpg">
+//       </div>
+//       <div class="mySlides fade">
+//           <img src="img/auto-012-compressor.jpg">
+//       </div>
+//       <div class="mySlides fade">
+//           <img src="img/auto-010-compressor.jpg">
+//       </div>
+//       <!-- Next and previous buttons -->
+//       <a class="prev">&#10094;</a>
+//       <a class="next">&#10095;</a>
+//   </div>
+//   <br>
+// </div>
 },{"sweetalert2":"node_modules/sweetalert2/dist/sweetalert2.all.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -3380,7 +3395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62455" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50240" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
