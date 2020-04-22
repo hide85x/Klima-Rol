@@ -177,6 +177,9 @@ body {
   padding-bottom: 20px;
   text-decoration: underline;
 }
+.main__row__content p {
+  font-size: 1.4rem;
+}
 @media (max-width: 1000px) {
   .main__row__content {
     width: 100%;
@@ -512,7 +515,6 @@ footer .three p {
   margin: 0;
 }
 footer .three a:hover {
-  font-weight: 600;
   text-decoration-line: underline;
 }
 
