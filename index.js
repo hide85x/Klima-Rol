@@ -136,7 +136,7 @@ function smoothScroll(event) {
       if (!start) start = timestamp;
       const progress = timestamp - start;
       // window.scrollTo(0, distance*(progress/duration) + startPosition);
-      window.scrollTo(0, linear(progress, startPosition, distance, duration));
+      window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
       if (progress < duration) window.requestAnimationFrame(step);
     }
   }
