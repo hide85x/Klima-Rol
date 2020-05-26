@@ -3191,6 +3191,14 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 var swal = require('sweetalert2');
 
 var h1 = document.createElement('a');
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'UA-582194-31');
 h1.innerHTML = "793732465";
 h1.href = "tel: +48793732465";
 console.log(h1.href);
@@ -3340,7 +3348,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56889" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53744" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

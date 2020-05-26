@@ -1,5 +1,11 @@
 const swal= require('sweetalert2')
 const h1= document.createElement('a');
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-582194-31');
+
 h1.innerHTML= "793732465"
 h1.href="tel: +48793732465";
 console.log(h1.href)
