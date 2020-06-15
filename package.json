@@ -5,8 +5,8 @@
     "sass": "^1.25.0"
   },
   "scripts": {
-    "build": "parcel build index.html --out-dir src --public-url ./",
-    "start": "parcel index.html --out-dir src "
+    "build": "parcel build index.html --out-dir docs --public-url ./",
+    "start": "parcel index.html --out-dir docs "
   },
   "dependencies": {
     "@sweetalert2/theme-dark": "^3.1.4",
