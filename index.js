@@ -13,7 +13,7 @@ const tel= document.querySelector('.fa-phone');
 console.log(tel)
 tel.addEventListener('click', ()=> {
     swal.fire({
-        html: 'click above to call',
+        html: 'zadzwoń',
         title: h1,
         width: "300px",
         background: '#FF4500',
