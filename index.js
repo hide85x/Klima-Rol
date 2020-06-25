@@ -12,6 +12,9 @@ console.log(h1.href)
 const tel= document.querySelector('.fa-phone');
 console.log(tel)
 tel.addEventListener('click', ()=> {
+    gtag('event', 'Click', {
+        'send_to': 'AW-1015794302',
+   });
     swal.fire({
         html: 'zadzwoń',
         title: h1,
@@ -27,6 +30,7 @@ const sidenav = document.querySelector('.sidebarnav')
 const el = document.querySelector('.hamburger');
 
 const addClass = () => {
+    
     el.classList.toggle('hamburger--active');
     sidenav.classList.toggle('sidebarnav--active')
 }
